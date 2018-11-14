@@ -1,0 +1,12 @@
+{
+  "name": "node-express",
+  "scripts": {
+    "start": "node ./src/index.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.16.3"
+  },
+  "license": "MIT",
+  "main": "./src/index.js"
+}
