@@ -1,8 +1,0 @@
-{
-  "public": true,
-  "type": "docker",
-  "features": {
-    "cloud": "v2"
-  },
-  "alias": "letsboot-deployaton-node"
-}
