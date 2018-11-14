@@ -1,5 +1,6 @@
 {
   "public": true,
+  "version": 1,
   "features": {
     "cloud": "v2"
   },
