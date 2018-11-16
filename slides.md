@@ -191,3 +191,79 @@ CMD ["/app"]
 
 - `docker ps`
 - `docker kill [name]`
+
+---
+
+## SQL
+
+https://elephantsql.com/
+
+----
+
+### Create Database
+
+```sql
+CREATE TABLE IF NOT EXISTS SOME_TABLE (
+	id serial,
+	age int,
+	name text,
+	nickname text,
+	PRIMARY KEY( id )
+);
+```
+
+```sql
+INSERT INTO SOME_TABLE (id, age, name, nickname) VALUES 
+	(1, 25, 'John', 'Johnny'),
+	(2, 25, 'Bob', 'Bobby');
+```
+
+----
+
+### Deploy with Database URL
+
+`now -e DATABASE_URL={url}`
+
+---
+
+## Firebase
+
+https://firebase.com
+
+- Static Hosting
+- Datastore (Document Storage, *NoSQL*)
+- Functions (Serverless API Endpoints)
+
+----
+
+### Initialize Firebase Project
+
+`npm i -g firebase-tools`
+
+`firebase login`
+
+`firebase init`
+
+- Choose Functions and Hosting
+- Choose JavaScript for Functions (for simplicity)
+- As public directory, choose `frontend/dist/frontend`
+
+----
+
+### Write a firebase function
+
+```javascript
+const functions = require('firebase-functions');
+
+exports.hello = functions.https.onRequest((req, res) => {
+  res.end('hello');
+});
+```
+
+---
+
+## Surge
+
+`npm i -g surge`
+
+`surge frontend/dist/frontend`
